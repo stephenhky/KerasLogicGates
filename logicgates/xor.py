@@ -8,8 +8,7 @@ labels = np.array([[0.], [1.], [1.], [0.]])
 
 def xor_gate():
     inputs = Input(shape=(2,))
-    x = Dense(64, activation='relu')(inputs)
-    x = Dense(32, activation='relu')(x)
+    x = Dense(2, activation='relu')(inputs)
     predictions = Dense(1, activation='softmax')(x)
 
     model = Model(input=inputs, output=predictions)
